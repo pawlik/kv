@@ -14,7 +14,8 @@ defmodule KV.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger]]
+    [applications: [:logger],
+     mod: {KV, []}] # application callback module (http://elixir-lang.org/getting-started/mix-otp/supervisor-and-application.html#the-application-callback)
   end
 
   # Dependencies can be Hex packages:
